@@ -10,7 +10,7 @@
 }
 
 main {
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -18,3 +18,5 @@ main {
 input{
     outline: none;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

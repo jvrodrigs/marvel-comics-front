@@ -11,7 +11,7 @@ export class MarvelApiService {
 
     PUBLIC_KEY = '745cc8a5e29b4318d97a9d9c686d4d68';
     HASH_KEY = '2ccabe864903868840d16da7f0c77b4e';
-    LIMIT_URL = 100;
+    LIMIT_URL = 10;
     URL_API = `https://gateway.marvel.com:443/v1/public/comics?limit=${this.LIMIT_URL}&ts=1&apikey=${this.PUBLIC_KEY}&hash=${this.HASH_KEY}`;
     
 

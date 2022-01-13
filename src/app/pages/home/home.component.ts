@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MarvelApiService } from 'src/app/service/marvel-api.service';
 
 @Component({
   selector: 'app-home',
@@ -8,16 +7,9 @@ import { MarvelApiService } from 'src/app/service/marvel-api.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(
-    private service: MarvelApiService
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    // this.service.listComicsMarvel.subscribe(
-    //   res => {
-    //     console.log(res)
-    //   }
-    // )
   }
 
 }

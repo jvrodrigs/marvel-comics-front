@@ -1,0 +1,20 @@
+<app-search (comicSearch)="isSearchComics($event)"></app-search>
+
+<div class="list">
+    <ng-template ngFor let-comic [ngForOf]="allComics">
+        <a class="comics">
+            <section class="comics-img">
+                <img class="image" src="../../../assets/imgAvengers.jpg" alt="">
+                <div class="middle">
+                    <button type="button">
+                        Detalhes
+                    </button>
+                </div>
+            </section>
+            <section class="comics-info">
+                <h2>{{(comic.title.length > 40) ? (comic.title | slice:0:35) + '...' : (comic.title) }}</h2>
+                <small>{{comic.creators.items[0]?.name}}</small>
+            </section>
+        </a>
+    </ng-template>
+</div>
