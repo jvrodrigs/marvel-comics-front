@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+.search-container{
+    padding: 40px 0 0 0;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.93rem 1.25rem;
+    border-radius: 0.625rem;
+    color: #ffffff;
+}
+
+form > input{
+    width: 95%;
+    background: none;
+    border: none;
+    font-size: 1.125rem;
+    border-bottom: 2px solid #151515;
+}
+
+input::placeholder{
+    color: #151515;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}

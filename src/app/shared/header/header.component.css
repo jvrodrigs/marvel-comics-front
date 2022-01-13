@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #202020;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    color: #FFFFFF;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    padding: 0 0 10px 0;
+}
