@@ -1,0 +1,21 @@
+.section-img{
+    margin-right: 5em;
+}
+
+.detail-container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title-publish-h2{
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 0 !important;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    max-width: 500px;
+}

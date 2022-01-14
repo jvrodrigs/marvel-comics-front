@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MarvelApiService } from 'src/app/service/marvel-api.service';
+import { DetailDialogComponent } from '../detail-dialog/detail-dialog.component';
 
 @Component({
   selector: 'app-comics',
@@ -10,13 +12,18 @@ export class ComicsComponent implements OnInit {
 
   private oldComics: any;
   public allComics: any;
+  
+  public newComics: any;
+
+  public valueLoadMorePag: number = 0;
 
   constructor(
-    private marvel: MarvelApiService
+    private marvel: MarvelApiService,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
-    this.marvel.listComicsMarvel.subscribe(
+    this.marvel.listComicsMarvel().subscribe(
       res => {
         this.allComics = res.data.results;
         this.oldComics = this.allComics;
@@ -32,8 +39,19 @@ export class ComicsComponent implements OnInit {
     this.allComics = filter;
   }
 
-  public isModalShow(){
-    alert('abriu')
+  //Verificacão de caso o quadrinho não tenha imagem no retorno da API;
+  public getImage(val: Array<any>){
+    if(val.length){
+      return val[0].path + '/portrait_medium.jpg';
+    }
+    return '../../../assets/imgAvengers.jpg';
+  }
+
+  openDialog(value: string) {
+    const dialogRef = this.dialog.open(DetailDialogComponent, {
+      width: '1200px',
+      data: {id: value}
+    });
   }
 
 }

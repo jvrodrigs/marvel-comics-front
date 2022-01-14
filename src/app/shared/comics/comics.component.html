@@ -4,17 +4,24 @@
     <ng-template ngFor let-comic [ngForOf]="allComics">
         <a class="comics">
             <section class="comics-img">
-                <img class="image" src="../../../assets/imgAvengers.jpg" alt="">
+                <img class="image" [src]="getImage(comic.images)" alt="">
                 <div class="middle">
-                    <button type="button">
+                    <button type="button" class="details" (click)="openDialog(comic.id)">
                         Detalhes
                     </button>
                 </div>
             </section>
             <section class="comics-info">
-                <h2>{{(comic.title.length > 40) ? (comic.title | slice:0:35) + '...' : (comic.title) }}</h2>
+                <h2 title="{{comic.title}}">{{(comic.title.length > 40) ? (comic.title | slice:0:26) + '...' : (comic.title) }}</h2>
                 <small>{{comic.creators.items[0]?.name}}</small>
             </section>
         </a>
     </ng-template>
+</div>
+<div class="button-load">
+    <button mat-raised-button>Carregar mais..</button>
+    <button mat-raised-button title="Enviar Aqui">
+        Enviar aqui
+        <mat-icon>local_shipping</mat-icon>
+    </button> 
 </div>

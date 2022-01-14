@@ -58,7 +58,7 @@ img{
     padding: 20px 0;
 }
 
-button {
+.details {
     background-color: #202020;
     color: white;
     font-size: 13px;
@@ -66,4 +66,17 @@ button {
     border: 0;
     cursor: pointer;
     border-radius: 25px;
+}
+
+.button-load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.button-load > button{
+    color: #ffffff;
+    background-color: #202020;
+    margin: 5px;
 }
