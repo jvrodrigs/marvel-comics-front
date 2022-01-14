@@ -1,0 +1,51 @@
+<div *ngIf="position.lat != 0">
+    <google-map width="1150" height="400" [center]="position">
+        <map-marker
+        [position]="position"
+        [title]="title"
+        >
+        </map-marker>
+    </google-map>
+</div>
+
+<form class="form-container">
+    <div class="address-road">
+        <mat-form-field appearance="fill">
+            <mat-label>CEP</mat-label>
+            <input matInput type="text" name="postcode" [(ngModel)] = "address.postcode">
+        </mat-form-field>
+    
+        <mat-form-field  appearance="fill">
+            <mat-label>Cidade</mat-label>
+            <input matInput type="text" name="city" [(ngModel)] = "address.city" >
+        </mat-form-field>
+        
+        <mat-form-field  appearance="fill">
+            <mat-label>Estado</mat-label>
+            <input matInput type="text" name="state" [(ngModel)] = "address.state">
+        </mat-form-field>    
+    </div>
+    
+    <div class="address-comp">
+        <mat-form-field  appearance="fill">
+            <mat-label>Rua</mat-label>
+            <input matInput type="text" name="road" [(ngModel)] = "address.road">
+        </mat-form-field>
+    
+        <mat-form-field  appearance="fill">
+            <mat-label>Bairro</mat-label>
+            <input matInput type="text" name="suburb" [(ngModel)] = "address.suburb">
+        </mat-form-field>
+    
+        <mat-form-field  appearance="fill">
+            <mat-label>Região</mat-label>
+            <input matInput type="text" name="municipality" [(ngModel)] = "address.municipality">
+        </mat-form-field>
+    </div>
+</form>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close class="closed-dialog">
+      Enviar
+    </button>
+</mat-dialog-actions>

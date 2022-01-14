@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MarvelApiService } from 'src/app/service/marvel-api.service';
 import { DetailDialogComponent } from '../detail-dialog/detail-dialog.component';
+import { SendGoogleMapsComponent } from '../send-google-maps/send-google-maps.component';
 
 @Component({
   selector: 'app-comics',
@@ -51,6 +52,12 @@ export class ComicsComponent implements OnInit {
     const dialogRef = this.dialog.open(DetailDialogComponent, {
       width: '1200px',
       data: {id: value}
+    });
+  }
+
+  openDialogSend(){
+    const dialogRefMaps = this.dialog.open(SendGoogleMapsComponent, {
+      width: '1200px'
     });
   }
 

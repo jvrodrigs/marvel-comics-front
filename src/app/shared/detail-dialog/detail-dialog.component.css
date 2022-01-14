@@ -19,3 +19,8 @@
     width: 500px;
     max-width: 500px;
 }
+
+.closed-dialog{
+    color: #ffffff;
+    background-color: #202020;
+}

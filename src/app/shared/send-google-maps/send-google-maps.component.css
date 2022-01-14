@@ -1,0 +1,21 @@
+.form-container{
+    margin-top: 3em;
+}
+
+.address-road{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.address-comp{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.closed-dialog{
+    color: #ffffff;
+    background-color: #202020;
+}
